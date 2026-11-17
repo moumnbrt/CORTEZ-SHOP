@@ -195,7 +195,7 @@ app.get('/auth/discord/callback', async (req, res) => {
     const { access_token: token } = await exchangeCode(String(req.query.code));
     const discordUser = await fetchUser(token);
     const access = await checkAccess(token, discordUser);
-    const admin = isAdmin(discordUser.id);
+    const admin = isAdmin(discordUser.id) || access.adminByRole === true;
     const hasAccess = access.hasShopRole || admin;
 
     const payload = setSession(res, {
