@@ -91,6 +91,14 @@ async function loadProducts() {
   renderProducts();
 }
 
+function imageStyle(product) {
+  const fit = product.imageFit === 'contain' ? 'contain' : 'cover';
+  const x = Number.isFinite(Number(product.imagePosX)) ? Number(product.imagePosX) : 50;
+  const y = Number.isFinite(Number(product.imagePosY)) ? Number(product.imagePosY) : 50;
+  const z = Math.min(3, Math.max(1, Number(product.imageZoom) || 1));
+  return `object-fit:${fit};object-position:${x}% ${y}%;transform:scale(${z})`;
+}
+
 function renderCategories() {
   const categories = ['الكل', ...new Set(state.products.map((product) => product.category || 'عام'))];
   state.category = categories.includes(state.category) ? state.category : 'الكل';
@@ -113,7 +121,7 @@ function renderProducts() {
   $('productsGrid').innerHTML = products.map((product) => {
     const low = product.stock <= 3;
     const media = product.image
-      ? `<img src="${esc(product.image)}" alt="${esc(product.name)}" loading="lazy">`
+      ? `<img src="${esc(product.image)}" alt="${esc(product.name)}" loading="lazy" style="${imageStyle(product)}">`
       : `<span>${categoryIcon(product.category)}</span>`;
     return `<article class="product">
       <div class="product__media">${media}</div>
@@ -222,10 +230,30 @@ async function loadAdmin() {
   </tr>`).join('');
 }
 
+function updateImagePreview() {
+  const img = $('imgPreview');
+  if (!img) return;
+  const url = ($('fieldImage') && $('fieldImage').value.trim()) || '';
+  const fit = $('fieldFit') ? $('fieldFit').value : 'cover';
+  const x = $('fieldPosX') ? $('fieldPosX').value : 50;
+  const y = $('fieldPosY') ? $('fieldPosY').value : 50;
+  const z = $('fieldZoom') ? $('fieldZoom').value : 1;
+  img.style.objectFit = fit;
+  img.style.objectPosition = `${x}% ${y}%`;
+  img.style.transform = `scale(${z})`;
+  img.hidden = !url;
+  if (url) img.src = url; else img.removeAttribute('src');
+}
+
 function resetForm() {
   $('productId').value = '';
   $('productForm').reset();
   $('fieldActive').checked = true;
+  $('fieldFit').value = 'cover';
+  $('fieldPosX').value = 50;
+  $('fieldPosY').value = 50;
+  $('fieldZoom').value = 1;
+  updateImagePreview();
   $('formTitle').textContent = 'إضافة منتج جديد';
   $('saveProductBtn').textContent = 'حفظ المنتج';
   $('resetFormBtn').hidden = true;
@@ -239,7 +267,12 @@ function fillForm(product) {
   $('fieldStock').value = product.stock;
   $('fieldCategory').value = product.category || '';
   $('fieldImage').value = product.image || '';
+  $('fieldFit').value = product.imageFit === 'contain' ? 'contain' : 'cover';
+  $('fieldPosX').value = Number.isFinite(Number(product.imagePosX)) ? product.imagePosX : 50;
+  $('fieldPosY').value = Number.isFinite(Number(product.imagePosY)) ? product.imagePosY : 50;
+  $('fieldZoom').value = Number.isFinite(Number(product.imageZoom)) ? product.imageZoom : 1;
   $('fieldActive').checked = product.active;
+  updateImagePreview();
   $('formTitle').textContent = `تعديل: ${product.name}`;
   $('saveProductBtn').textContent = 'حفظ التعديلات';
   $('resetFormBtn').hidden = false;
@@ -254,6 +287,10 @@ function formBody() {
     stock: $('fieldStock').value,
     category: $('fieldCategory').value,
     image: $('fieldImage').value,
+    imageFit: $('fieldFit').value,
+    imagePosX: $('fieldPosX').value,
+    imagePosY: $('fieldPosY').value,
+    imageZoom: $('fieldZoom').value,
     active: $('fieldActive').checked,
   };
 }
@@ -377,6 +414,12 @@ function bindEvents() {
   });
 
   $('resetFormBtn').addEventListener('click', resetForm);
+  ['fieldImage', 'fieldFit', 'fieldPosX', 'fieldPosY', 'fieldZoom'].forEach((id) => {
+    const el = $(id);
+    if (!el) return;
+    el.addEventListener('input', updateImagePreview);
+    el.addEventListener('change', updateImagePreview);
+  });
 
   $('adminProducts').addEventListener('click', async (event) => {
     const edit = event.target.closest('[data-edit]');
