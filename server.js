@@ -86,8 +86,13 @@ app.get('/api/products', (_req, res) => {
   res.json({
     products: store.products()
       .filter((product) => product.active)
-      .map(({ id, name, description, category, image, price, stock }) => ({
-        id, name, description, category, image, price, stock,
+      .map(({ id, name, description, category, image, imageFit, imagePosX, imagePosY, imageZoom, price, stock }) => ({
+        id, name, description, category, image,
+        imageFit: imageFit || 'cover',
+        imagePosX: Number.isFinite(imagePosX) ? imagePosX : 50,
+        imagePosY: Number.isFinite(imagePosY) ? imagePosY : 50,
+        imageZoom: Number.isFinite(imageZoom) ? imageZoom : 1,
+        price, stock,
       })),
   });
 });
