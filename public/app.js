@@ -20,7 +20,7 @@ const money = (value) =>
   Number(value || 0).toLocaleString('en-US', { maximumFractionDigits: 2 });
 
 const dateOf = (iso) => {
-  try { return new Date(iso).toLocaleString('ar-EG'); } catch { return '—'; }
+  try { return new Date(iso).toLocaleString('en-GB'); } catch { return '—'; }
 };
 
 const categoryIcon = (category = '') => {
