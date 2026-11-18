@@ -5,7 +5,7 @@
       "name": "Pistol SNS",
       "description": "مسدس مجال قريب",
       "category": "pistol",
-      "image": "https://media.base44.com/images/public/6afcc3717593afb96511e972/89033d558_pistol-sns.png",
+      "image": "https://media.base44.com/images/public/6afcc3717593afb96511e972/63b146dfd_pistol-sns.webp",
       "imageFit": "cover",
       "imagePosX": 50,
       "imagePosY": 50,
@@ -14,14 +14,14 @@
       "stock": 50,
       "active": true,
       "createdAt": "2026-11-18T18:25:00.000Z",
-      "updatedAt": "2026-11-18T20:10:00.000Z"
+      "updatedAt": "2026-11-18T20:20:00.000Z"
     },
     {
       "id": "5a6cab13-655b-485d-a446-e35a152bfea4",
       "name": "Pistol 2",
       "description": "",
       "category": "pistol",
-      "image": "https://media.base44.com/images/public/6afcc3717593afb96511e972/51ee5e9e6_pistol-2.png",
+      "image": "https://media.base44.com/images/public/6afcc3717593afb96511e972/a68877b65_pistol-2.webp",
       "imageFit": "cover",
       "imagePosX": 50,
       "imagePosY": 50,
@@ -30,14 +30,14 @@
       "stock": 10,
       "active": true,
       "createdAt": "2026-11-18T18:25:00.000Z",
-      "updatedAt": "2026-11-18T20:10:00.000Z"
+      "updatedAt": "2026-11-18T20:20:00.000Z"
     },
     {
       "id": "c002cdb4-8852-42cb-b4c3-9830bd236dd7",
       "name": "Pistol 3",
       "description": "",
       "category": "pistol",
-      "image": "https://media.base44.com/images/public/6afcc3717593afb96511e972/6180d6790_pistol-3.png",
+      "image": "https://media.base44.com/images/public/6afcc3717593afb96511e972/ce6eed822_pistol-3.webp",
       "imageFit": "cover",
       "imagePosX": 50,
       "imagePosY": 50,
@@ -46,14 +46,14 @@
       "stock": 10,
       "active": true,
       "createdAt": "2026-11-18T18:25:00.000Z",
-      "updatedAt": "2026-11-18T20:10:00.000Z"
+      "updatedAt": "2026-11-18T20:20:00.000Z"
     },
     {
       "id": "e354e87e-47c9-498b-9c77-2cd5793af2cc",
       "name": "SMG 1",
       "description": "",
       "category": "smg",
-      "image": "https://media.base44.com/images/public/6afcc3717593afb96511e972/fe975fa22_smg-1.png",
+      "image": "https://media.base44.com/images/public/6afcc3717593afb96511e972/d572ae4e3_smg-1.webp",
       "imageFit": "cover",
       "imagePosX": 50,
       "imagePosY": 50,
@@ -62,14 +62,14 @@
       "stock": 10,
       "active": true,
       "createdAt": "2026-11-18T18:25:00.000Z",
-      "updatedAt": "2026-11-18T20:10:00.000Z"
+      "updatedAt": "2026-11-18T20:20:00.000Z"
     },
     {
       "id": "5361dfb9-390b-4cad-8a2f-e50453dd4de5",
       "name": "SMG 2",
       "description": "",
       "category": "smg",
-      "image": "https://media.base44.com/images/public/6afcc3717593afb96511e972/f1bfa7d67_smg-2.png",
+      "image": "https://media.base44.com/images/public/6afcc3717593afb96511e972/245b1526c_smg-2.webp",
       "imageFit": "cover",
       "imagePosX": 50,
       "imagePosY": 50,
@@ -78,14 +78,14 @@
       "stock": 10,
       "active": true,
       "createdAt": "2026-11-18T18:25:00.000Z",
-      "updatedAt": "2026-11-18T20:10:00.000Z"
+      "updatedAt": "2026-11-18T20:20:00.000Z"
     },
     {
       "id": "4a45c046-cb07-4e25-a055-aeb2626c9869",
       "name": "Magazine 1",
       "description": "",
       "category": "magazine",
-      "image": "https://media.base44.com/images/public/6afcc3717593afb96511e972/fbd1f1ed6_magazine-1.png",
+      "image": "https://media.base44.com/images/public/6afcc3717593afb96511e972/f4892c34d_magazine-1.webp",
       "imageFit": "cover",
       "imagePosX": 50,
       "imagePosY": 50,
@@ -94,14 +94,14 @@
       "stock": 10,
       "active": true,
       "createdAt": "2026-11-18T18:25:00.000Z",
-      "updatedAt": "2026-11-18T20:10:00.000Z"
+      "updatedAt": "2026-11-18T20:20:00.000Z"
     },
     {
       "id": "ca462d24-afda-4c08-b1ae-798ebad8e499",
       "name": "Ammo 1",
       "description": "",
       "category": "ammo",
-      "image": "https://media.base44.com/images/public/6afcc3717593afb96511e972/0129e1e58_ammo-1.png",
+      "image": "https://media.base44.com/images/public/6afcc3717593afb96511e972/04cd30114_ammo-1.webp",
       "imageFit": "cover",
       "imagePosX": 50,
       "imagePosY": 50,
@@ -110,14 +110,14 @@
       "stock": 10,
       "active": true,
       "createdAt": "2026-11-18T18:25:00.000Z",
-      "updatedAt": "2026-11-18T20:10:00.000Z"
+      "updatedAt": "2026-11-18T20:20:00.000Z"
     },
     {
       "id": "fb9d5293-7a91-42d3-aa12-5c6bee8ffd64",
       "name": "Ammo 2",
       "description": "",
       "category": "ammo",
-      "image": "https://media.base44.com/images/public/6afcc3717593afb96511e972/4099d3252_ammo-2.png",
+      "image": "https://media.base44.com/images/public/6afcc3717593afb96511e972/fea05c838_ammo-2.webp",
       "imageFit": "cover",
       "imagePosX": 50,
       "imagePosY": 50,
@@ -126,7 +126,7 @@
       "stock": 10,
       "active": true,
       "createdAt": "2026-11-18T18:25:00.000Z",
-      "updatedAt": "2026-11-18T20:10:00.000Z"
+      "updatedAt": "2026-11-18T20:20:00.000Z"
     }
   ],
   "orders": [],
